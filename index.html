@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Registro · Rifa Stratis</title>
+<!-- Puerta del QR "Registro general" (talento sin correo @mystratis.com).
+     Genera el código de este celular (llave guardada en el navegador + huella del equipo + número de visita)
+     y abre el Forms anónimo con ese código ya escrito. La gestión de la rifa solo cuenta el primer registro
+     de cada celular; los demás quedan en revisión. No guarda ni envía nada más. -->
+<style>
+:root{--navy:#0C1137;--tinta:#3D4A6B;--gris:#5B6685;--fondo:#F5F6FA;--coral:#FA7D61;--rojo:#FD4961}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--fondo);color:var(--navy);font:16px/1.5 'Segoe UI',system-ui,-apple-system,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+main{min-height:100svh;display:grid;place-items:center;padding:28px 20px}
+.c{width:100%;max-width:420px;text-align:center}
+.logo{width:120px;height:auto;color:var(--navy);display:block;margin:0 auto 26px}
+.r{width:38px;height:38px;margin:6px auto 18px;border-radius:50%;border:3px solid rgba(250,125,97,.25);border-top-color:var(--coral);animation:g .8s linear infinite}
+@keyframes g{to{transform:rotate(360deg)}}
+h1{font-size:24px;font-weight:700;letter-spacing:-.01em;margin:0 0 8px}
+p{margin:0 0 14px;color:var(--tinta)}
+.aviso{background:#fff;border-radius:18px;padding:22px 20px;box-shadow:0 20px 40px -24px rgba(12,17,55,.35),0 0 0 1px rgba(12,17,55,.06);text-align:left}
+.aviso h1{font-size:20px}
+.btns{display:flex;flex-direction:column;gap:10px;margin-top:18px}
+a.btn,button.btn{display:flex;align-items:center;justify-content:center;height:50px;border-radius:999px;font:inherit;font-weight:700;text-decoration:none;cursor:pointer;border:1.5px solid var(--navy)}
+.pri{background:var(--navy);color:#fff}
+.sec{background:#fff;color:var(--navy)}
+small{display:block;margin-top:22px;color:var(--gris);font-size:12.5px;line-height:1.45}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<main><div class="c">
+  <svg class="logo" aria-label="Stratis" role="img" viewBox="0 0 111 25" xmlns="http://www.w3.org/2000/svg"><path d="M23.096 18.063a6.16 6.16 0 01-.597 2.694c-.404.845-1.054 1.567-1.95 2.166-.896.616-2.072 1.091-3.495 1.46-1.44.353-3.197.529-5.287.529a22.4 22.4 0 01-3.46-.264 19.737 19.737 0 01-3.196-.775 16.3 16.3 0 01-2.81-1.215c-.86-.475-1.598-1.003-2.213-1.584l1.668-2.007c1.265 1.091 2.74 1.919 4.444 2.482 1.686.564 3.548.845 5.567.845 2.249 0 3.83-.317 4.778-.933.93-.616 1.405-1.479 1.405-2.57 0-.845-.37-1.567-1.107-2.148-.737-.581-1.984-1.144-3.74-1.708l-6.341-1.99c-2.09-.668-3.67-1.513-4.742-2.552C.948 9.454.422 8.133.422 6.532c0-.828.193-1.62.58-2.395.385-.774 1-1.443 1.808-2.042.826-.599 1.88-1.056 3.144-1.408 1.282-.352 2.81-.529 4.62-.529 1.088 0 2.177.088 3.248.265a20.07 20.07 0 013.109.774c.984.335 1.914.74 2.775 1.215.86.475 1.598 1.003 2.213 1.584L20.25 6.004a13.317 13.317 0 00-4.267-2.483c-1.581-.563-3.373-.845-5.41-.845-1.668 0-2.915.282-3.758.863-.843.58-1.247 1.285-1.247 2.148 0 .475.07.88.228 1.214.158.353.421.67.79.969.37.299.843.58 1.458.827.597.264 1.352.528 2.23.828l6.306 2.007c2.037.651 3.635 1.496 4.777 2.553 1.16 1.038 1.739 2.376 1.739 3.978zm66.178 6.655h-4.672V7.658h4.672zm20.338-8.257c-.86-.81-2.107-1.443-3.705-1.901l-5.164-1.497c-1.089-.317-1.862-.686-2.318-1.109-.457-.422-.685-.898-.685-1.408 0-.581.28-1.057.86-1.444s1.458-.563 2.635-.563c1.668 0 3.073.211 4.233.651a16.31 16.31 0 013.038 1.497v-2.8a17.283 17.283 0 00-2.266-.933c-1.493-.493-3.179-.757-5.023-.757-1.51 0-2.81.123-3.864.388-1.071.264-1.95.616-2.634 1.056-.685.44-1.194.968-1.51 1.584a4.275 4.275 0 00-.492 1.99c0 1.338.456 2.394 1.352 3.186.896.793 2.055 1.391 3.478 1.814l5.163 1.496c1.177.335 2.002.704 2.459 1.127.474.405.703.88.703 1.39 0 .67-.334 1.233-1.002 1.673-.667.44-1.826.67-3.495.67-1.668 0-3.126-.212-4.39-.652-1.248-.44-2.336-.933-3.285-1.514v2.782c.106.052.21.105.334.158.65.3 1.37.563 2.143.81.79.229 1.615.422 2.494.546.878.14 1.773.193 2.687.193 1.756 0 3.231-.123 4.426-.387 1.194-.264 2.178-.616 2.933-1.092.755-.475 1.3-1.038 1.633-1.69.334-.651.422-.933.492-2.183.07-1.25-.369-2.288-1.23-3.08zM51.267 7.588h-4.953c-2.652 0-4.707.616-6.112 1.866-1.422 1.25-2.125 2.993-2.125 5.247v10.088h4.602V14.7c0-1.585.404-2.782 1.194-3.592.79-.81 1.932-1.215 3.425-1.215h3.952V7.588h.017zM35.653 22.36h-2.458a2.908 2.908 0 01-1.616-.968c-.316-.37-.562-.846-.755-1.427-.194-.581-.281-1.303-.281-2.13V9.912h5.11V7.588h-5.11v-5.95h-4.62v16.197c0 2.165.668 3.855 2.02 5.088 1.247 1.144 3.004 1.742 5.234 1.813h.105c.14 0 .264.018.387.018.14 0 .263-.018.386-.018h1.581l.017-2.377zM75.698 1.637h-4.62v16.198c0 2.165.668 3.855 2.02 5.088 1.247 1.144 3.004 1.742 5.234 1.813h.123c.14 0 .246.018.387.018.14 0 .263-.018.386-.018h1.58v-2.377H78.35a2.908 2.908 0 01-1.616-.968 3.921 3.921 0 01-.755-1.426c-.193-.581-.281-1.303-.281-2.13V9.912h5.11V7.588h-5.11v-5.95zm-7.746 11.831c-.14-1.479-1.036-3.063-2.107-4.014-1.423-1.25-3.46-1.866-6.112-1.866H54.78v2.324h3.952c1.493 0 2.634.405 3.424 1.215.65.651 1.02 1.584 1.142 2.764h-4.566c-2.986 0-5.2.458-6.622 1.355-1.422.898-2.125 2.272-2.125 4.103 0 1.83.703 3.204 2.125 4.102 1.423.898 3.618 1.355 6.622 1.355h9.238V13.891c0-.141 0-.282-.018-.423zm-4.601 9.014h-4.62c-2.528 0-3.793-1.038-3.793-3.133 0-2.095 1.265-3.152 3.794-3.152h4.619v6.285z" fill="currentColor"/></svg>
+
+  <div id="cargando">
+    <div class="r" aria-hidden="true"></div>
+    <h1>Preparando tu registro…</h1>
+    <p>En un momento se abre el formulario de la rifa.</p>
+  </div>
+
+  <div id="repetido" class="aviso" hidden>
+    <h1>Este celular ya inició un registro</h1>
+    <p>En la rifa <b>solo cuenta un registro por celular</b> y debe ser el tuyo. Si alguien más necesita registrarse, que lo haga desde su propio celular o con el equipo de RH.</p>
+    <div class="btns">
+      <a class="btn pri" id="seguir" href="#">Es mi registro, continuar</a>
+      <button class="btn sec" id="salir" type="button">Salir</button>
+    </div>
+  </div>
+
+  <div id="listo" hidden>
+    <h1>Gracias</h1>
+    <p>Puedes cerrar esta página.</p>
+  </div>
+
+  <small>Usamos un código de este celular solo para evitar registros duplicados en la rifa. No guardamos ni enviamos otros datos.</small>
+</div></main>
+
+<script>
+(function () {
+  'use strict';
+  // Forms anónimo "Registro general · Rifa Stratis 2026" y su pregunta "Código de celular"
+  var FORMS = 'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=kinHz-zAtkKLuX4UW0XwMDD7rarWhK1JltUFW7Bkd3dUMjZUUktRTjNBSVNWRDBWQUVMVUVVM1dVOS4u';
+  var PREGUNTA = 'r4cecba38aa91631f36aa5b604bdfc92f';
+  var ABC = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';     // sin 0/O ni 1/I/L para que se lea sin errores
+
+  function aleatorio(n) {
+    var b = new Uint8Array(n), s = '';
+    (window.crypto || window.msCrypto).getRandomValues(b);
+    for (var i = 0; i < n; i++) s += ABC[b[i] % ABC.length];
+    return s;
+  }
+  function leer(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function guardar(k, v) { try { localStorage.setItem(k, v); return leer(k) === v; } catch (e) { return false; } }
+
+  // 1) Llave del celular: aleatoria, se queda en el navegador. Si no se puede guardar (modo privado), lo marca con "P".
+  var llave = leer('rifa.llave');
+  var privado = false;
+  if (!llave) { llave = aleatorio(10); privado = !guardar('rifa.llave', llave); }
+
+  // 2) Número de visita desde este celular
+  var visita = (parseInt(leer('rifa.visitas'), 10) || 0) + 1;
+  guardar('rifa.visitas', String(visita));
+
+  // 3) Huella del equipo: características del navegador y del hardware (la MAC no es accesible desde la web)
+  function lienzo() {
+    try {
+      var c = document.createElement('canvas'); c.width = 220; c.height = 40;
+      var x = c.getContext('2d');
+      x.textBaseline = 'top'; x.font = '16px Arial'; x.fillStyle = '#FA7D61'; x.fillRect(0, 0, 220, 40);
+      x.fillStyle = '#0C1137'; x.fillText('Stratis Rifa · ñ ✓ 2026', 4, 10);
+      x.strokeStyle = 'rgba(5,106,206,.6)'; x.arc(180, 20, 14, 0, 5); x.stroke();
+      return c.toDataURL();
+    } catch (e) { return ''; }
+  }
+  function grafica() {
+    try {
+      var g = document.createElement('canvas').getContext('webgl');
+      var d = g && g.getExtension('WEBGL_debug_renderer_info');
+      return d ? g.getParameter(d.UNMASKED_VENDOR_WEBGL) + '|' + g.getParameter(d.UNMASKED_RENDERER_WEBGL) : '';
+    } catch (e) { return ''; }
+  }
+  var n = navigator, s = screen;
+  var rasgos = [
+    n.userAgent, n.platform, (n.languages || [n.language]).join(','),
+    (Intl.DateTimeFormat().resolvedOptions().timeZone || ''), new Date().getTimezoneOffset(),
+    s.width + 'x' + s.height, s.colorDepth, window.devicePixelRatio,
+    n.hardwareConcurrency || '', n.deviceMemory || '', n.maxTouchPoints || 0,
+    grafica(), lienzo()
+  ].join('§');
+
+  function fnv(t) {                                   // hash corto y estable (FNV-1a de 32 bits)
+    var h = 0x811c9dc5;
+    for (var i = 0; i < t.length; i++) { h ^= t.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
+    return ('00000000' + h.toString(16)).slice(-8).toUpperCase();
+  }
+  var huella = fnv(rasgos);
+
+  // Código: LLAVE-HUELLA-VISITA (+P si el navegador no deja guardar la llave)
+  var codigo = llave + '-' + huella + '-' + visita + (privado ? 'P' : '');
+  var destino = FORMS + '&' + PREGUNTA + '=' + encodeURIComponent(codigo);
+
+  var $ = function (id) { return document.getElementById(id); };
+  if (visita > 1) {
+    $('cargando').hidden = true; $('repetido').hidden = false;
+    $('seguir').href = destino;
+    $('salir').onclick = function () { $('repetido').hidden = true; $('listo').hidden = false; };
+  } else {
+    setTimeout(function () { location.replace(destino); }, 350);
+  }
+})();
+</script>
+</body>
+</html>
