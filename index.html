@@ -117,8 +117,16 @@ small{display:block;margin-top:22px;color:var(--gris);font-size:12.5px;line-heig
   }
   var huella = fnv(rasgos);
 
-  // Código: LLAVE-HUELLA-VISITA (+P si el navegador no deja guardar la llave)
-  var codigo = llave + '-' + huella + '-' + visita + (privado ? 'P' : '');
+  // Código: LLAVE-HUELLA-VISITA (+P si el navegador no deja guardar la llave) + verificador de 3 letras.
+  // Forms no deja bloquear la pregunta: si alguien cambia el código, el verificador ya no cuadra y el cruce lo marca.
+  // (Mismo cálculo que verificador() en app/js/shared/cruce.js)
+  function verificador(base) {
+    var x = parseInt(fnv('stratis-rifa-2026|' + base), 16), v = '';
+    for (var i = 0; i < 3; i++) { v += ABC[x % ABC.length]; x = Math.floor(x / ABC.length); }
+    return v;
+  }
+  var base = llave + '-' + huella + '-' + visita + (privado ? 'P' : '');
+  var codigo = base + '-' + verificador(base);
   var destino = FORMS + '&' + PREGUNTA + '=' + encodeURIComponent(codigo);
 
   var $ = function (id) { return document.getElementById(id); };
