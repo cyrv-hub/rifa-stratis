@@ -94,7 +94,15 @@ small{display:block;margin-top:22px;color:var(--gris);font-size:12.5px;line-heig
   });
   if (/^\d+$/.test(qs.rifa || '') && /^[A-Za-z0-9]{4,20}$/.test(qs.c || '')) {
     $('elige').hidden = false; $('privacidad').hidden = true;
-    $('conCuenta').href = REGISTRO + '?rifa=' + qs.rifa + '&c=' + encodeURIComponent(qs.c);
+    // La llave de este celular viaja a registro.aspx (?d=) para que el mismo celular se reconozca en los dos caminos
+    var ll = null;
+    try { ll = localStorage.getItem('rifa.llave'); } catch (e) {}
+    if (!/^[A-Z0-9]{10}$/.test(ll || '')) {
+      var rb = new Uint8Array(10); (window.crypto || window.msCrypto).getRandomValues(rb); ll = '';
+      for (var j = 0; j < 10; j++) ll += ABC[rb[j] % ABC.length];
+      try { localStorage.setItem('rifa.llave', ll); } catch (e) {}
+    }
+    $('conCuenta').href = REGISTRO + '?rifa=' + qs.rifa + '&c=' + encodeURIComponent(qs.c) + '&d=' + ll;
     $('sinCuenta').onclick = function (e) {
       e.preventDefault();
       $('elige').hidden = true; $('privacidad').hidden = false; $('cargando').hidden = false;
